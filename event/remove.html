@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .box{
+            border: 1px solid black;
+            padding: 10px;
+        }
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <h1>자바스크립트 함수</h1>
+    <h2>삭제하기</h2>
+    <hr />
+    <button onclick="del()">remove</button>
+    <div class="box" id="outerBox">
+        <div class="box" id="innerBox1">
+            내부박스1
+        </div>
+    </div>
+
+    <script>
+        function del() {
+            let el = document.querySelector("div");
+            el.remove();
+
+        }
+    </script>
+</body>
+</html>

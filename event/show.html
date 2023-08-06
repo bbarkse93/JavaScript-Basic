@@ -1,0 +1,54 @@
+<!-- html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            border: 1px solid black;
+            padding: 10px;
+        }
+        #b1{
+            display: none;
+        }
+        #b2{
+            visibility: hidden;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>자바스크립트 함수</h1>
+    <h2>나타내기 이벤트</h2>
+    <hr />
+    <button onclick="showByDisplay()">
+        display로 나타내기
+    </button>
+    <button onclick="showByVisiblity()">
+        visible로 나타내기
+    </button>
+    <div class="box">
+        <div class="box" id="b1">내부박스1</div>
+        <div class="box" id="b2">내부박스2</div>
+    </div>
+    <script>
+        function showByDisplay() {
+            let e1 = document.querySelector("#b1");
+            e1.style.display = 'block';
+            console.log("showByDisplay 함수 실행");
+
+        }
+        function showByVisiblity() {
+            let e2 = document.querySelector("#b2");
+            e2.style.visibility = "visible";
+            console.log("showByVisiblity 함수 실행");
+        }
+    </script>
+</body>
+
+
+
+</html>

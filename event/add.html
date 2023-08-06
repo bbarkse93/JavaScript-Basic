@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+        border: 1px solid black;
+        padding: 10px;
+        }
+        </style>
+        
+</head>
+<body>
+    <h1>자바스크립트 함수</h1>
+    <h2>추가하기</h1>    
+    <hr />
+    <button onclick="appAppend()">Append로 추가</button>
+    <button onclick="addPrepend()">Prepend로 추가</button>
+    <button onclick="addBefore()">Before로 추가</button>
+    <button onclick="addAfter()">After로 추가</button>
+    <div class="box" id="outerBox">
+
+    </div>
+    <script>
+        function appAppend() {
+            let newel = document.createElement("div");
+            newel.setAttribute("class", "box");
+            newel.setAttribute("id", "innerBox1");
+            newel.innerHTML = "내부박스1";
+
+            let el = document.querySelector("#outerBox");
+            el.append(newel);
+
+        }
+        function addPrepend() {
+            let newel = document.createElement("div");
+            newel.setAttribute("class", "box");
+            newel.setAttribute("id", "innerBox2");
+            newel.innerHTML = "내부박스2";
+
+            let el = document.querySelector("#outerBox");
+            el.prepend(newel);
+        }
+        function addBefore() {
+            let newel = document.createElement("div");
+            newel.setAttribute("class", "box");
+            newel.setAttribute("id", "innerBox1");
+            newel.innerHTML = "내부박스3";
+
+            let el = document.querySelector("#outerBox");
+            el.before(newel);
+        }
+        function addAfter() {
+            let newel = document.createElement("div");
+            newel.setAttribute("class", "box");
+            newel.setAttribute("id", "innerBox1");
+            newel.innerHTML = "내부박스4";
+
+            let el = document.querySelector("#outerBox");
+            el.after(newel);
+        }
+    </script>
+</body>
+</html>
