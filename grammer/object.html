@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>자바스크립트 Object 생성</h1>
+    <hr />
+    <script>
+        // user 객체
+        let user = {
+            id: 1,
+            username: "ssar",
+            password: "1234"
+        }
+        console.log("id: ", user.id);
+        console.log("username: ", user.username );
+        console.log("password: ", user.password);
+        console.log("user: ", user);
+
+        // board 객체(board객체 안에 user객체를 담을 수 있음)
+        let board = {
+            id:1,
+            title:"제목",
+            content:"내용",
+            user:user
+        }
+        console.log("board: ", board);
+    </script>
+</body>
+</html>
